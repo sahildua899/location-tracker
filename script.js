@@ -27,7 +27,7 @@ function onError(error) {
 }
 
 function checkWeather(location) {
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=d3fce2b1754d7f87ca9096fb20f9011e`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=d3fce2b1754d7f87ca9096fb20f9011e`)
     .then(response => response.json()).then(response => {
         console.log(response.main.temp)
         const weatherSection = document.querySelector('.weatherSection').innerHTML = response.main.temp;
